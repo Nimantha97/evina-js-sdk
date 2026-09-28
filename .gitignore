@@ -1,0 +1,14 @@
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+*.log
+
+# Secrets must never be committed (NFR-SEC-11). Only .env.example (placeholders) is tracked.
+.env
+.env.*
+!.env.example
+
+.DS_Store
+.idea/
+.vscode/

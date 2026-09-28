@@ -1,0 +1,15 @@
+{
+  "name": "@ideabiz/evina-browser",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "EVINA browser helper (Phase 2 stub). Talks only to the consumer backend; never to EVINA; holds no secrets.",
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  }
+}

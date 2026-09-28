@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "noEmit": true,
+    // Browser package: no Node types here. Structurally cannot use node:crypto etc.
+    // (reinforces ADR-004 separation; DOM libs get added when P2 work begins).
+    "types": []
+  },
+  "include": ["src"]
+}

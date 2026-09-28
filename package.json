@@ -1,0 +1,38 @@
+{
+  "name": "evina-sdk-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "EVINA / DCB Protect anti-fraud SDK (monorepo). See docs/ for SRS, ADRs, threat model and plan.",
+  "engines": {
+    "node": ">=20"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "typecheck": "tsc -p packages/server/tsconfig.json --noEmit && tsc -p packages/browser/tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "build": "npm run build --workspace @ideabiz/evina-sdk",
+    "probe:v1": "node --import tsx/esm packages/server/scripts/probe-v1.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "audit": "npm audit --audit-level=high"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@types/node": "^22.0.0",
+    "@vitest/coverage-v8": "5.0.0",
+    "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.3.3",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.11.0",
+    "vitest": "5.0.0"
+  }
+}

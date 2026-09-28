@@ -1,0 +1,21 @@
+{
+  "name": "evina-sidecar",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Thin HTTP sidecar exposing @ideabiz/evina-sdk over REST, so a non-Node backend (e.g. the Java pin-auth service) can use EVINA DCB Protect. This is the production integration path (Option 1).",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node --import tsx/esm src/sidecar.ts"
+  },
+  "dependencies": {
+    "@ideabiz/evina-sdk": "file:../../packages/server",
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "tsx": "^4.19.0"
+  }
+}

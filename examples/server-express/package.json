@@ -1,0 +1,21 @@
+{
+  "name": "evina-sdk-example-server-express",
+  "version": "0.0.0",
+  "private": true,
+  "description": "End-to-end demo of @ideabiz/evina-sdk with Express, driven by /v1/test_session.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node --import tsx/esm src/server.ts"
+  },
+  "dependencies": {
+    "@ideabiz/evina-sdk": "file:../../packages/server",
+    "express": "^4.21.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "tsx": "^4.19.0"
+  }
+}
